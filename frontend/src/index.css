@@ -1,0 +1,138 @@
+/* existing styles (keep your existing rules too) */
+body { background: #f8f9fa; }
+
+/* Card image sizing */
+.card-img-top { max-height: 180px; object-fit: cover; }
+
+/* Modals z-index */
+.modal { z-index: 2000; }
+
+/* Centered single-column form container for admin dashboard */
+.form-centered {
+  max-width: 760px;
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(20,20,40,0.06);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Small responsive tweaks */
+@media (max-width: 576px) {
+  .form-centered {
+    padding: 0.9rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+/* --- New styles for carousel, category, and cards --- */
+.hero-carousel { position: relative; }
+.carousel-slide { position: absolute; top: 0; left: 0; right:0; bottom:0; }
+
+/* Category section */
+.category-section .category-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #9fdf7a;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.category-section .category-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.85);
+}
+.category-section .category-label {
+  position: relative;
+  z-index: 2;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+/* Herb card tweaks */
+.herb-card .product-title { font-size: 1.1rem; font-weight: 700; }
+.herb-card .product-desc { color: #6c757d; }
+
+/* WhatsApp button (already inline styled) - fallback CSS */
+.whatsapp-btn {
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Why choose us */
+.why-choose-us h2 { color: #2f8a1f; font-family: 'Georgia', serif; }
+
+/* Responsive cards grid for herbs */
+@media (max-width: 767px) {
+  .category-section .category-card { height: 120px; }
+  .hero-carousel .carousel-slide { height: 220px; }
+}
+
+/* Auth card styles - add to src/index.css or App.css */
+.auth-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfb 100%);
+  border: 1px solid rgba(34,34,34,0.04);
+  box-shadow: 0 8px 30px rgba(33,33,66,0.06);
+  padding: 1.5rem;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(33,33,66,0.08);
+}
+
+.auth-input {
+  transition: box-shadow 160ms ease, border-color 160ms ease;
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid rgba(33,33,66,0.08);
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: rgba(37,211,102,0.9); /* whatsapp green accent */
+  box-shadow: 0 6px 20px rgba(37,211,102,0.08);
+}
+/* Center latest herbs section */
+section.my-5.text-center .row {
+  margin-top: 1rem;
+}
+
+.btn-outline-success {
+  border-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Sidebar card styling */
+.card.shadow-sm {
+  border: 1px solid #d8f3dc;
+  border-left: 4px solid #2d6a4f;
+}
+
+
+@media (max-width: 576px) {
+  .auth-card { margin: 0 12px; padding: 1rem; }
+}
